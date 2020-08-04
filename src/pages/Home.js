@@ -1,20 +1,18 @@
 import React from "react";
-import Drawer from "../components/drawer/drawer.component";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles({
-  container: {
-    display: "flex",
-  },
-});
+import Main from "../components/Main/Main.component";
+import Sidebar from "../components/Sidebar/Sidebar.component";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "../styles/global";
+import { lightTheme, darkTheme } from "../styles/theme";
 
 const Home = () => {
-  const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <Drawer />
-      <p>Homepage</p>
-    </div>
+    <ThemeProvider theme={lightTheme}>
+      <div>
+        <Sidebar />
+        <Main />
+      </div>
+    </ThemeProvider>
   );
 };
 
