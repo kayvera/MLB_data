@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Profile from "./Profile/Profile.component";
-import Menu from "./Menu/Menu.component";
-import Logo from "./Logo/Logo.component";
+import Profile from "../Profile/Profile.component";
+import Menu from "../Menu/Menu.component";
+import Logo from "../Logo/Logo.component";
 import { GlobalStyles } from "../../styles/global";
 
 const Container = styled.div`

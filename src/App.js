@@ -11,12 +11,13 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/Roster" component={Roster} />
-        <Route path="/Players" component={Players} />
-        <Route path="/News" component={News} />
       </Switch>
     </Router>
   );
 };
+
+// <Route path="/Roster" component={Roster} />
+// <Route path="/Players" component={Players} />
+// <Route path="/News" component={News} />
 
 export default App;
