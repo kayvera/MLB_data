@@ -12,22 +12,12 @@ const globalTheme = {
   colorGray: "#adadad",
 };
 
-export const lightTheme = {
-  primary: "#FFF",
+export const theme = {
+  primary: "#E8E4E4",
   secondary: "#002D72",
   textColor: "#FFFFFF",
   header: "#585280",
   headerNumber: "#FFF",
   activeMenu: "#585280",
-  ...globalTheme,
-};
-
-export const darkTheme = {
-  primary: "#302C40",
-  secondary: "#2C2839",
-  textColor: "#FFF",
-  header: "#FFF",
-  headerNumber: "#585280",
-  activeMenu: "#FFF",
   ...globalTheme,
 };
