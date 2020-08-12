@@ -1,14 +1,7 @@
-// import React from "react";
-// //import Directory from "../components/Directory/Directory.component";
-// import { ThemeProvider } from "styled-components";
-// import { theme } from "../styles/theme";
+import React from "react";
 
-// const Players = (props) => {
-//   return (
-//     <ThemeProvider theme={theme}>
-//       <div>Hello world</div>
-//     </ThemeProvider>
-//   );
-// };
+const Players = () => {
+  return <div>hello world</div>;
+};
 
-// export default Players;
+export default Players;

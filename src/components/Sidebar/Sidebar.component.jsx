@@ -1,30 +1,56 @@
 import React from "react";
-import styled from "styled-components";
-import Profile from "../Profile/Profile.component";
-import Menu from "../Menu/Menu.component";
-import Logo from "../Logo/Logo.component";
-import { GlobalStyles } from "../../styles/global";
+import { Link } from "react-router-dom";
+import {
+  SidebarContainer,
+  LogoContainer,
+  Logo,
+  ProfileImg,
+  ProfileName,
+  ProfileContainer,
+  Points,
+  NavigationMenu,
+  MenuLinks,
+  icon,
+} from "./Sidebar.styles";
 
-const Container = styled.div`
-  background-color: ${({ theme }) => theme.secondary};
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 16rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+import {
+  HomeIcon,
+  PeopleAltIcon,
+  ListAltIcon,
+  AnnouncementIcon,
+  Image,
+} from "./index.js";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
-    <Container>
-      <GlobalStyles />
-      <Logo />
-      <Profile />
-      <Menu />
-    </Container>
+    <SidebarContainer>
+      <LogoContainer>
+        <Logo>MLB FANTASY</Logo>
+      </LogoContainer>
+      <ProfileContainer>
+        <ProfileImg src={Image} />
+        <ProfileName>Mikayla Rivera</ProfileName>
+        <Points>Points: 32,087</Points>
+      </ProfileContainer>
+      <NavigationMenu>
+        <MenuLinks exact as={Link} to="/">
+          <HomeIcon style={icon} />
+          HOME
+        </MenuLinks>
+        <MenuLinks as={Link} to="/players">
+          <PeopleAltIcon style={icon} />
+          PLAYERS
+        </MenuLinks>
+        <MenuLinks as={Link} to="/roster">
+          <ListAltIcon style={icon} />
+          ROSTER
+        </MenuLinks>
+        <MenuLinks as={Link} to="/news">
+          <AnnouncementIcon style={icon} />
+          News
+        </MenuLinks>
+      </NavigationMenu>
+    </SidebarContainer>
   );
 };
 

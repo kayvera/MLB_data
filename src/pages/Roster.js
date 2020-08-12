@@ -1,14 +1,7 @@
-// import React from "react";
-// //import Directory from "../components/Directory/Directory.component";
-// import { ThemeProvider } from "styled-components";
-// import { theme } from "../styles/theme";
+import React from "react";
 
-// const Roster = () => {
-//   return (
-//     <ThemeProvider theme={theme}>
-//       <div>Hello'world</div>
-//     </ThemeProvider>
-//   );
-// };
+const Roster = () => {
+  return <div>hello world</div>;
+};
 
-// export default Roster;
+export default Roster;
