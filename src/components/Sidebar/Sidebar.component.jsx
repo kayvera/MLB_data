@@ -25,7 +25,9 @@ const Sidebar = (props) => {
   return (
     <SidebarContainer>
       <LogoContainer>
-        <Logo>MLB FANTASY</Logo>
+        <Logo exact as={Link} to="/">
+          MLB FANTASY
+        </Logo>
       </LogoContainer>
       <ProfileContainer>
         <ProfileImg src={Image} />
@@ -47,7 +49,7 @@ const Sidebar = (props) => {
         </MenuLinks>
         <MenuLinks as={Link} to="/news">
           <AnnouncementIcon style={icon} />
-          News
+          NEWS
         </MenuLinks>
       </NavigationMenu>
     </SidebarContainer>

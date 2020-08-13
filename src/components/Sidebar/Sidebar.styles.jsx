@@ -44,6 +44,7 @@ export const Logo = styled.div`
   color: #fff;
   font-size: 32px;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 export const LogoContainer = styled.div`
