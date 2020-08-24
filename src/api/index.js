@@ -1,5 +1,5 @@
 export const fetchData = async () => {
-  const axios = require("axios");
+  this.setState({ ...this.state, isFetching: true });
 
   axios({
     method: "GET",
@@ -7,7 +7,7 @@ export const fetchData = async () => {
     headers: {
       "content-type": "application/octet-stream",
       "x-rapidapi-host": "mlb-data.p.rapidapi.com",
-      "x-rapidapi-key": "9309bc1735msh49fb28155d75348p11cb42jsndf31386c2f58",
+      "x-rapidapi-key": process.env.X_RAPIDAPI_KEY,
       useQueryString: true,
     },
     params: {
@@ -20,9 +20,10 @@ export const fetchData = async () => {
     },
   })
     .then((response) => {
-      console.log(response);
+      this.setState({ data: response.data, isFetching: false });
     })
     .catch((error) => {
       console.log(error);
+      this.setState({ ...this.state, isFetching: false });
     });
 };

@@ -12,11 +12,13 @@ import {
 import { fetchData } from "../../api";
 
 class UpcomingGames extends Component {
+  
   async componentDidMount() {
     const data = await fetchData();
 
-    console.log(data);
-  }
+    console.log(data)
+    }
+  
 
   render() {
     return (
@@ -26,7 +28,7 @@ class UpcomingGames extends Component {
           <TableContainer>
             <Row>
               <TeamData>Logo 1</TeamData>
-              <GameData rowSpan="2">{this.props.data}</GameData>
+              <GameData rowSpan="2"></GameData>
             </Row>
             <Row>
               <TeamData>Logo 2</TeamData>
@@ -36,6 +38,6 @@ class UpcomingGames extends Component {
       </UpcomingGamesContainer>
     );
   }
-}
+
 
 export default UpcomingGames;
