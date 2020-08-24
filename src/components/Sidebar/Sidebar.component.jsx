@@ -21,7 +21,7 @@ import {
   Image,
 } from "./index.js";
 
-const Sidebar = (props) => {
+const Sidebar = ({ name, points }) => {
   return (
     <SidebarContainer>
       <LogoContainer>
@@ -31,8 +31,8 @@ const Sidebar = (props) => {
       </LogoContainer>
       <ProfileContainer>
         <ProfileImg src={Image} />
-        <ProfileName>Mikayla Rivera</ProfileName>
-        <Points>Points: 32,087</Points>
+        <ProfileName>Name</ProfileName>
+        <Points>Points: Points</Points>
       </ProfileContainer>
       <NavigationMenu>
         <MenuLinks exact as={Link} to="/">

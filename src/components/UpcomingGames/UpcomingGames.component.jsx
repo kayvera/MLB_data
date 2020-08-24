@@ -1,24 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   UpcomingGamesContainer,
   CardContainer,
   TableContainer,
-  // ImageContainer,
-  // TimeContainer,
   Header,
+  Row,
+  TeamData,
+  GameData,
 } from "./UpcomingGames.styles";
 
-//let rows = [] // async function later, we will be fetching from api; map function
+import { fetchData } from "../../api";
 
-const UpcomingGames = () => {
-  return (
-    <UpcomingGamesContainer>
-      <Header>Upcoming Games</Header>
-      <CardContainer>
-        <TableContainer></TableContainer>
-      </CardContainer>
-    </UpcomingGamesContainer>
-  );
-};
+class UpcomingGames extends Component {
+  async componentDidMount() {
+    const data = await fetchData();
+
+    console.log(data);
+  }
+
+  render() {
+    return (
+      <UpcomingGamesContainer>
+        <Header>Upcoming Games</Header>
+        <CardContainer>
+          <TableContainer>
+            <Row>
+              <TeamData>Logo 1</TeamData>
+              <GameData rowSpan="2">{this.props.data}</GameData>
+            </Row>
+            <Row>
+              <TeamData>Logo 2</TeamData>
+            </Row>
+          </TableContainer>
+        </CardContainer>
+      </UpcomingGamesContainer>
+    );
+  }
+}
 
 export default UpcomingGames;
